@@ -20,11 +20,11 @@ export default function Home() {
 
     const onSearch = async (e: any) => {
         e.preventDefault();
+        e.stopPropagation();
 
         setDisabled(new Array(contextLen));
         setContext([]);
         setContextResults(await query(search, contextLen) || []);
-        console.log(contextResults);
     };
 
     return (
@@ -46,7 +46,6 @@ export default function Home() {
                             <input type="text" placeholder="Search..." name='search' value={search}
                                    onChange={(e: any) => setSearch(e.target.value)}/>
                             <div className={styles.search}></div>
-                            <button type='submit' style={{display: 'none'}}>Submit</button>
                         </form>
                     </div>
                 </div>
