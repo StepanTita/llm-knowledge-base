@@ -33,7 +33,7 @@ export const query = async (query?: string, topK?: number) => {
     return results.matches?.map((match) => ({
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-ignore
-        text: match.metadata?.text,
+        text: match.metadata?.response,
         score: match.score,
     }))
 };

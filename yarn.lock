@@ -200,10 +200,10 @@
   resolved "https://registry.yarnpkg.com/@types/uuid/-/uuid-9.0.7.tgz#b14cebc75455eeeb160d5fe23c2fcc0c64f724d8"
   integrity sha512-WUtIVRUZ9i5dYXefDEAI7sh9/O7jGvHg7Df/5O/gtH3Yabe5odI3UWopVR1qbPXQtvOxWu3mM4XxlYeZtMWF4g==
 
-"@xenova/transformers@^2.9.0":
-  version "2.9.0"
-  resolved "https://registry.yarnpkg.com/@xenova/transformers/-/transformers-2.9.0.tgz#6a3917c0778712b92aa4aa3e0dec390dc1a5a892"
-  integrity sha512-wzSjIMpkVaD+bIgIVxlXDeeKawr233t+1pPb5AhpYeTAPFdOaVUVdT4vIKqmmszApBFYYUpOqv5LoJ4lOAm6Ug==
+"@xenova/transformers@^2.10.1":
+  version "2.10.1"
+  resolved "https://registry.yarnpkg.com/@xenova/transformers/-/transformers-2.10.1.tgz#50eff94fa155f5e6eebc4d49a1e637350e959073"
+  integrity sha512-vUCU3rKEcuH0dSuJzXuESbUPziqh8FvjLVikUh//5SWGcwfdccIfTUhDsS1obbrUTW3ve0CHeJvHnHbk0QTzEA==
   dependencies:
     onnxruntime-web "1.14.0"
     sharp "^0.32.0"
@@ -585,7 +585,7 @@ napi-build-utils@^1.0.1:
   resolved "https://registry.yarnpkg.com/napi-build-utils/-/napi-build-utils-1.0.2.tgz#b1fddc0b2c46e380a0b7a76f984dd47c41a13806"
   integrity sha512-ONmRUqK7zj7DWX0D9ADe03wbwOBZxNAfF20PlGfCWQcD3+/MakShIHrMqx9YwPTfxDdF1zLeL+RGZiR9kGMLdg==
 
-next@13.5.7:
+next@13.5.7-canary.37:
   version "13.5.7-canary.37"
   resolved "https://registry.yarnpkg.com/next/-/next-13.5.7-canary.37.tgz#52fb626057d15619e0284ede8d714101f94fb90c"
   integrity sha512-owQ+eUEFI9Yj5yLJOLESYDey7wIil/z7VVU08G9jdo8G135UmDITuluGFOZOHPoDoNrf2cbRB7RtRQTLlaCkOg==
