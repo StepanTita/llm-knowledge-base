@@ -20,7 +20,7 @@ class Embedder {
         return {
             id: uuidv4(),
             metadata: {
-                text,
+                text: text,
             },
             values: Array.from(result.data),
         };
