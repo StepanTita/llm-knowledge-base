@@ -2,7 +2,7 @@ import styles from "@/styles/Home.module.css";
 import {round} from "@xenova/transformers";
 
 type ResultsProps = {
-    list: { text?: string, score?: number }[],
+    list: { request?: string, response?: string, score?: number }[],
     context: string[],
     onContextUpdate: (newContext: string[]) => void,
 
@@ -22,7 +22,7 @@ function SearchResultsContainer(props: ResultsProps) {
                 className={styles.card + (props.disabled[i] ? ' ' + styles.disabled : '')}
                 onClick={() => {
                     if (!props.disabled[i])
-                        props.onContextUpdate([...props.context, props.list[i].text || '']);
+                        props.onContextUpdate([...props.context, props.list[i].response || '']);
                     props.disabled[i] = true;
                     props.setDisabled([...props.disabled]);
                 }}
@@ -32,7 +32,11 @@ function SearchResultsContainer(props: ResultsProps) {
                     {round(props.list[i].score || 0, 3)} <span>-&gt;</span>
                 </h2>
                 <p>
-                    {props.list[i].text}
+                    {props.list[i].request}
+                </p>
+                <hr/>
+                    <p>
+                    {props.list[i].response}
                 </p>
             </span>
         );
