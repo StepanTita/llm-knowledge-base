@@ -2,7 +2,7 @@ import styles from "@/styles/Home.module.css";
 import {round} from "@xenova/transformers";
 
 type ResultsProps = {
-    list: { request?: string, response?: string, score?: number }[],
+    list: { request?: string, response?: string, score?: number, topic?: string }[],
     context: string[],
     onContextUpdate: (newContext: string[]) => void,
 
@@ -10,6 +10,11 @@ type ResultsProps = {
     setDisabled: React.Dispatch<React.SetStateAction<boolean[]>>
 }
 
+
+function formatTopic(s: string) {
+    s = s.replaceAll('_', ' ');
+    return s.charAt(0).toUpperCase() + s.slice(1);
+}
 
 function SearchResultsContainer(props: ResultsProps) {
     const cards = [];
@@ -29,7 +34,7 @@ function SearchResultsContainer(props: ResultsProps) {
             >
                 {/*'rgba(0, 0, 0, ' + ((props.list[i].score || 0) / scoreSum) + ')'*/}
                 <h2>
-                    {round(props.list[i].score || 0, 3)} <span>-&gt;</span>
+                    {formatTopic(props.list[i].topic || 'Complaints')} <span className={styles.badge + ' ' + styles.badgePrimary}>{round(props.list[i].score || 0, 3)}</span> <span>-&gt;</span>
                 </h2>
                 <p>
                     {props.list[i].request}

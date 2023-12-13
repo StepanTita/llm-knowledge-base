@@ -35,6 +35,7 @@ export const query = async (query?: string, topK?: number) => {
         // @ts-ignore
         request: match.metadata?.text,
         response: match.metadata?.response,
+        topic: match.metadata?.topic,
         score: match.score,
     }))
 };
