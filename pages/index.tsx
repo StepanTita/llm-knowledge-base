@@ -50,6 +50,10 @@ export default function Home() {
                     </div>
                 </div>
 
+                <GPTChat query={search} context={context}></GPTChat>
+
+                <hr/>
+
                 <SearchResultsContainer
                     disabled={disabled}
                     setDisabled={setDisabled}
@@ -57,10 +61,6 @@ export default function Home() {
                     context={context}
                     onContextUpdate={(newContext: string[]) => setContext(newContext)}>
                 </SearchResultsContainer>
-
-                <hr/>
-
-                <GPTChat query={search} context={context}></GPTChat>
             </main>
         </>
     )
